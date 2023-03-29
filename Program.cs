@@ -37,20 +37,21 @@ public class Program {
                 int S2 = InputS2();
                 if (S1 >= 9 && S2 >= 9) {
                     int check = director(G);
-                    if (D1 == 0) {
-                        continue;
-                    }
+                    if (D1 == 0) continue;
+                    if (D2 == 0) continue;
                     if (check == 1) D1--;
                     else D2--;
                     Console.WriteLine(check);
                     Console.WriteLine("Number : {0}",i);
                 } 
                 else if (S1 >= 9 && S2 < 9) {
+                    if (D1 == 0) continue;
                     Console.WriteLine("1");
                     D1--;
                     Console.WriteLine("Number : {0}",i);
                 }
                 else if (S1 < 9 && S2 >= 9) {
+                    if (D2 == 0) continue;
                     Console.WriteLine("2");
                     D2--;
                     Console.WriteLine("Number : {0}",i);
